@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteFlow AI</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Script&family=MonteCarlo&family=Just+Me+Again+Down+Here&family=Style+Script&family=Roboto&family=Open+Sans&family=Lato&family=Poppins&family=Merriweather&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1 class="header-title">🚀 NoteFlow AI</h1>
+      </div>
+      <div class="header-right">
+        <span class="user-name">neyasudhan@example.com</span>
+        <img
+          src="{{ url_for('static', filename='account.webp') }}"
+          alt="Account"
+          class="account-logo"
+        />
+      </div>
+    </header>
+
+    <!-- Background animation -->
+    <div class="bg-objects" aria-hidden="true">
+      <div class="orbit o1"></div>
+      <div class="orbit o2"></div>
+      <div class="orbit o3"></div>
+    </div>
+
+    <div class="container">
+      <div class="main">
+        <!-- Left Panel (Controls) -->
+        <div class="card control-panel">
+          <label for="url">YouTube URL:</label>
+          <input type="text" id="url" placeholder="Paste a YouTube URL..." />
+
+          <label for="title">Custom Title (optional):</label>
+          <input type="text" id="title" placeholder="Enter custom title..." />
+
+          <!-- Preferences -->
+          <div class="prefs">
+            <h3>Preferences</h3>
+            <label
+              ><input type="radio" name="style" value="concise" checked />
+              Concise</label
+            >
+            <label
+              ><input type="radio" name="style" value="detailed" />
+              Detailed</label
+            >
+            <label
+              ><input type="radio" name="style" value="creative" />
+              Creative</label
+            >
+
+            <label
+              ><input type="radio" name="format" value="bullets" checked />
+              Bullets</label
+            >
+            <label
+              ><input type="radio" name="format" value="paragraph" />
+              Paragraphs</label
+            >
+          </div>
+
+          <!-- Font Selection -->
+          <div class="font-section">
+            <h3>Font</h3>
+            <select id="font-select">
+              <!-- System Fonts -->
+              <option
+                value="Times New Roman"
+                style="font-family: 'Times New Roman', serif"
+              >
+                Times New Roman
+              </option>
+              <option value="Arial" style="font-family: Arial, sans-serif">
+                Arial
+              </option>
+              <option value="Verdana" style="font-family: Verdana, sans-serif">
+                Verdana
+              </option>
+              <option value="Georgia" style="font-family: Georgia, serif">
+                Georgia
+              </option>
+              <option
+                value="Courier New"
+                style="font-family: 'Courier New', monospace"
+              >
+                Courier New
+              </option>
+              <option value="Tahoma" style="font-family: Tahoma, sans-serif">
+                Tahoma
+              </option>
+
+              <!-- Google Fonts (Normal) -->
+              <option value="Roboto" style="font-family: 'Roboto', sans-serif">
+                Roboto
+              </option>
+              <option
+                value="Open Sans"
+                style="font-family: 'Open Sans', sans-serif"
+              >
+                Open Sans
+              </option>
+              <option value="Lato" style="font-family: 'Lato', sans-serif">
+                Lato
+              </option>
+              <option
+                value="Poppins"
+                style="font-family: 'Poppins', sans-serif"
+              >
+                Poppins
+              </option>
+              <option
+                value="Merriweather"
+                style="font-family: 'Merriweather', serif"
+              >
+                Merriweather
+              </option>
+              <option
+                value="Raleway"
+                style="font-family: 'Raleway', sans-serif"
+              >
+                Raleway
+              </option>
+
+              <!-- Fancy / Expressive -->
+              <option
+                value="League Script"
+                style="font-family: 'League Script', cursive"
+              >
+                League Script
+              </option>
+              <option
+                value="MonteCarlo"
+                style="font-family: 'MonteCarlo', cursive"
+              >
+                MonteCarlo
+              </option>
+              <option
+                value="Just Me Again Down Here"
+                style="font-family: 'Just Me Again Down Here', cursive"
+              >
+                Just Me Again Down Here
+              </option>
+              <option
+                value="Style Script"
+                style="font-family: 'Style Script', cursive"
+              >
+                Style Script
+              </option>
+            </select>
+          </div>
+
+          <!-- Tags -->
+          <div class="tags-section">
+            <h3>Tags</h3>
+            <div id="predefined-tags">
+              <button class="tag-btn">Short</button>
+              <button class="tag-btn">Highlight</button>
+              <button class="tag-btn">Essay</button>
+            </div>
+            <input
+              type="text"
+              id="tags-input"
+              placeholder="Add custom tag & press Enter"
+            />
+            <div id="tags"></div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="actions">
+            <button id="preview">🔮 Preview</button>
+            <button id="download">⬇️ Download</button>
+          </div>
+        </div>
+
+        <!-- Right Panel (Output) -->
+        <div id="output" class="output">
+          <p>Preview will appear here...</p>
+        </div>
+      </div>
+      
+      <div id="fullscreen-view">
+  <button class="back-btn">⬅ Back</button>
+  <div id="fullscreen-content"></div>
+</div>
+
+      <!-- Notes List -->
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

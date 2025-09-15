@@ -1,0 +1,36 @@
+```
+├── 📁 backend/
+│   └── 📁 app/
+│       ├── 📁 __pycache__/ 🚫 (auto-hidden)
+│       ├── 📁 routes/
+│       │   ├── 📁 __pycache__/ 🚫 (auto-hidden)
+│       │   ├── 🐍 __init__.py
+│       │   ├── 🐍 api.py
+│       │   └── 🐍 web.py
+│       ├── 📁 services/
+│       │   ├── 📁 __pycache__/ 🚫 (auto-hidden)
+│       │   ├── 🐍 __init__.py
+│       │   ├── 🐍 gemini_service.py
+│       │   ├── 🐍 pdf_service.py
+│       │   └── 🐍 transcript_service.py
+│       ├── 📁 utils/
+│       │   └── 📁 src/
+│       │       ├── 📁 __pycache__/ 🚫 (auto-hidden)
+│       │       ├── 🐍 __init__.py
+│       │       ├── 🐍 config.py
+│       │       └── 🐍 helper.py
+│       ├── 🐍 __init__.py
+│       ├── 🐍 app.py
+│       └── 🐍 main.py
+├── 📁 frontend/
+│   ├── 📁 static/
+│   │   ├── 🖼️ account.webp
+│   │   ├── 📄 app.js
+│   │   └── 🎨 styles.css
+│   └── 📁 templates/
+│       └── 🌐 index.html
+├── 📁 venv/ 🚫 (auto-hidden)
+├── 🔒 .env 🚫 (auto-hidden)
+├── 📄 file structure.txt
+└── 📄 requirements.txt
+```
